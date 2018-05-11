@@ -1,3 +1,4 @@
+
 html {
 	overflow-x: hidden;
 }
@@ -102,10 +103,8 @@ body {
 	position: relative;
 	background-color: rgba(255,255,255,1);
 	margin-top: 1200px;
-	padding: 25px 150px;
-	border-radius: 8px;
+	padding: 15px 80px;
 	box-shadow: 10px 10px 5px 0 rgba(255,255,255,0.1);
-	border-radius: 50px;
 	border-style: inset;
 	border-color: #696969;
 	border-width: 5px;
@@ -122,17 +121,20 @@ body {
 }
 
 .flexbox-container img {
-	margin-top: 30px;
+	vertical-align: center;
+	margin-top: 20%;
 	line-height: 0;
 	margin-bottom: 2em;
 	overflow: hidden;
-	border-radius: 50px;
+	border-radius: 50%;
 	padding: 1px;
-	border: 2px solid #021a40;
+	border: .2px solid #021a40;
 	box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.7);
-	height: 500px;
-	width: 500px;
+	height: 400px;
+	width: 400px;
+	
 }
+
 
 .about {
 	font-weight: bold;
