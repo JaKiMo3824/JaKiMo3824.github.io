@@ -7,310 +7,227 @@ body, html {
 	height: 100%;
 	width: 100%;
 	margin: 0;
-	font-family: 'impact';
+	font-family: 'PT Serif';
+    background-image: url("./images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+	
+
+}
+h5 {
+	font-color: black;
 }
 
 body {
-	background-image: url(../images/milkyway.jpg);
-	height: 100%;
-	Width: 100%;
 	z-index: 1;
-	/*Create the parallax scrolling effect */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	display: block;
 	margin: 0;
 }
-	
-.head-main {
-	font-family: "Advent Pro";
-	text-align: left;
-	font-variant: small-caps;
-	font-size: 50px;
-	color: #DCDCDC;
-	text-shadow: 2px 2px 8px #696969;
-	z-index: 500;
+/* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/hero2.jpg);
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+	font-family: Century Gothic, "Century Gothic";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
 
 
-#navbar {
-	z-index: 500;
-	position: fixed;
-	top: 20px;
-	width: 100%;
-	background-color: rgba(0,0,0,.75);
-}
-
-#navbar ul {
-	margin: 0;
-	padding: 5px;
-	list-style-type: none;
-	background-color: #000;
-}
-
-#navbar ul li {
-	display: inline;
-}
-
-#navbar li {
-	padding-top: 17px;
-	font-size: 20px;
-	float: right;
-}
-
-#navbar ul li a {
-	text-decoration: none;
-	padding: .2em 1em;
-	color: #fff;
-	background-color: #000;
-	
-}
-
-#navbar ul li a:hover {
-	color: #000;
-	background-color: #fff;
-}
-
-.container scroll-right{
-	overflow: hidden;
-	width: 100%;
-}
-
-.scroll-right {
-	font-family: "advent Pro";
-	text-align: center;
-	color: #fff;
-	position: relative;
-	top: 350px;
-	left: 200px;
-	right: 200px;
-	bottom: 300px;
-	width: 100%;
-}
 
 
 /* -- about section -- */
 
-.flexbox-container {
-	display: -ms-flex;
-	display: -webkit-flex;
-	display: flex;
-	position: relative;
-	background-color: rgba(255,255,255,1);
-	margin-top: 1200px;
-	padding: 15px 80px;
-	box-shadow: 10px 10px 5px 0 rgba(255,255,255,0.1);
-	border-style: inset;
-	border-color: #696969;
-	border-width: 5px;
-	
-}
 
-.flexbox-container > div {
-	width: 50%;
-	padding: 10px;
-}
-
-.flexbox-container > div:first-child {
-	margin-right: 20px;
-}
-
-.flexbox-container img {
-	vertical-align: center;
-	margin-top: 20%;
-	line-height: 0;
-	margin-bottom: 2em;
-	overflow: hidden;
-	border-radius: 50%;
-	padding: 1px;
-	border: .2px solid #021a40;
-	box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.7);
-	height: 400px;
-	width: 400px;
-	
-}
-
-
-.about {
-	font-weight: bold;
-	color: #000;
-	font-family: "advent pro";
-	font-size: 30px;
-	text-align: center;
-	z-index: 150;
-	top: 20px;
-	bottom: 20px;
-	padding: 50px;
-}
 	
 
 /* -- end about section -- */
 
 /* -- EXPERIENCE SECTION -- */
 
-.heading {
-	top: 100px;
-	position: relative;
-	text-align: center;
-	font-family: "impact";
-	font-size: 50px;
-	color: #fff;
+
+  /*-- CAROUSEL --*/
+  
+  #carouselExample {
+	  height: 300px;
+	  width: auto;
+  }
+  
+  
+  #carouselExample img {
+    position: relative;
+    float: left;
+    width:  200px;
+    height: auto;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+	
+
+  }
+  
+  
+  
+  
+  @media (min-width: 768px) {
+
+    /* show 3 items */
+    .carousel-inner .active,
+    .carousel-inner .active + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item  {
+        display: block;
+    }
+    
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
 }
 
-#experience {
-	top: 100px;
-	font-family: "advent pro";
-	letter-spacing: 2px;
-	height: 600px;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
-	float: left;
-	display: flex;
-	position: relative;
-	flex-wrap: wrap;
-	flex-flow: row wrap;
-	display: -ms-flex;
-	display: -webkit-flex;
-	text-align: center;
-	color: #fff;
-}
 
-.card img {
-	height: 300px;
-	width: auto;
-}
-
-.card {
-	padding: 20px;
-}
 
 /* -- END EXPERIENCE SECTION -- */
 
+
+
+
+
+
+
+
+
+
 /* -- CONTACT SECTION -- */
 
-#contact {
-	position: relative;
-	top: 1800px;
-	color: #fff;
-	text-align: center;
-}
-
-.contact-title {
-	font-family: "impact";
-	font-size: 50px;
-	padding: 50px;
-	
-}
-
-label {
-    display: block;
-    margin-top: 20px;
-    letter-spacing: 2px;
-	font-family: "advent pro";
-	font-size: 25px;
-}
-
-/* Centre the page */
-.body {
-    display:block;
-    margin:0 auto;
-    width:576px;
-}
-
-/* Centre the form within the page */
-form {
-    margin:0 auto;
-    width:459px;
-}
-
-/* Style the text boxes */
-input, textarea {
-	width:439px;
-	height:27px;
-	background:#efefef;
-	border:1px solid #dedede;
-	padding:10px;
-	margin-top:3px;
-	font-size:0.9em;
-	color:#3a3a3a;
-}
-
-textarea {
-	height:213px;
-	background:url(images/textarea-bg.jpg) right no-repeat #efefef;
-}
-
-input, textarea {
-    width:439px;
-    height:27px;
-    background:#efefef;
-    border:1px solid #dedede;
-    padding:10px;
-    margin-top:3px;
-    font-size:0.9em;
-    color:#3a3a3a;
-    -moz-border-radius:5px;
-    -webkit-border-radius:5px;
-    border-radius:5px;
-}
-
-input:focus, textarea:focus {
-    border:1px solid #97d6eb;
-}
-
-#submit {
-    width:150px;
-    height:50px;
-	background-color: #fff;
-    background:url(./images/submit.png);
-	color: #fff;
-    border: 2px solid;
-	border-radius: 5px;
-    margin-top:20px;
-    cursor:pointer;
-	z-index: 150;
-}
-
-	#submit:hover {
-	    opacity:.75;
-		color: #87CEFA;
-	}
 	
 /* ----- social media icons --- */
+.hero-image2 {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: url(../images/world.jpg);
 
-#contact ul {
-	list-style-type: none;
-	padding: 10px;
-	display: flex;
-	margin: 10px;
+    /* Set a specific height */
+    height: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-#contact li {
-	margin: 10px;
+/* Place text in the middle of the image */
+.hero-text2 {
+    text-align: center;
+	font-family: Century Gothic, "Century Gothic";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
 
 
-.social {
-	align-items: center;
-	justify-content: center;
-	display: flex;
+footer {
+	margin: auto;
+    width: 50%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	padding: 5px;
+	
 	
 }
 
-.fa {
-    padding: 20px;
-    font-size: 35px;
-    width: 25px;
-    text-align: center;
-    text-decoration: none;
-	border-radius: 50%;
-}
+
+
+/* #social-buttons li{ */
+	/* display: inline; */
+	/* float: left; */
+	/* text-align: center; */
+	
+/* } */
+
+/* .fa { */
+    /* padding: 17px; */
+    /* font-size: 50px; */
+    /* width: 50px; */
+	/* height: 50px; */
+    /* text-align: center; */
+    /* text-decoration: none; */
+	/* border-radius: 50%; */
+	/* margin-right: 5px; */
+	/* margin-left: 5px; */
+/* } */
 
 /* Add a hover effect if you want */
 .fa:hover {
@@ -323,6 +240,15 @@ input:focus, textarea:focus {
 .fa-facebook {
     background: #3B5998;
     color: white;
+	padding: 17px;
+    font-size: 50px;
+    width: 50px;
+	height: 50px;
+    text-align: center;
+    text-decoration: none;
+	border-radius: 50%;
+	margin-right: 5px;
+	margin-left: 5px;
 }
 
 /* Linkedin */
@@ -330,6 +256,15 @@ input:focus, textarea:focus {
 .fa-linkedin {
 	background: #000;
 	color: white;
+	padding: 17px;
+    font-size: 50px;
+    width: 50px;
+	height: 50px;
+    text-align: center;
+    text-decoration: none;
+	border-radius: 50%;
+	margin-right: 5px;
+	margin-left: 5px;
 }
 
 /* github */
@@ -337,18 +272,22 @@ input:focus, textarea:focus {
 .fa-github {
 	background: #ff0000;
 	color: white;
+	padding: 17px;
+    font-size: 50px;
+    width: 50px;
+	height: 50px;
+    text-align: center;
+    text-decoration: none;
+	border-radius: 50%;
+	margin-right: 5px;
+	margin-left: 5px;
 }
+
+
 
 /*----- END CONTACT SECTION  ---*/
 
 
-footer {
-	margin-top: 50px;
-	display: block;
-	background-color: #d3d3d3;
-	color: black;
-	padding: 2px;
-}
 
 @media all and (max-width:640px) and (min-width:381px) {
     .head-main { 
